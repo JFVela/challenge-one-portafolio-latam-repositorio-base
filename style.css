@@ -4,6 +4,7 @@
   --color-de-fondo-menu: #ffffff;
   --color-fondo-2: #eaf2fd;
   --color-de-link: #000000;
+  --color-label: #a2a2a2;
   --color-texto: #464646;
   --color-boton-primario: #2a7ae4;
   --color-boton-secundario: #ffffff;
@@ -313,7 +314,7 @@ a {
 .proyectos__botones a {
   border: 2px solid var(--color-boton-primario);
   padding: 12px 16px;
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
   border-radius: 0.5rem;
 }
 
@@ -336,6 +337,106 @@ a {
   color: var(--color-boton-primario);
 }
 
+/* ------------------------------ Contactos ---------------------------------------*/
+
+.contacto {
+  background-color: var(--color-fondo-2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacto * {
+  padding: 0;
+  margin: 0;
+}
+
+.imagenContacto {
+  display: none;
+}
+
+.contacto__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: 400;
+}
+
+.campo {
+  position: relative;
+}
+
+.campo__input {
+  color: var(--color-texto);
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 0.5rem;
+  border-bottom: 2px solid var(--color-label);
+  transition: border-bottom 0.3s; 
+}
+
+.campo__input:focus + .campo__label,
+.campo__input:not(:placeholder-shown) + .campo__label {
+  transform: translateY(-10px) scale(0.9);
+  transform-origin: left top;
+  color: var(--color-boton-primario);
+}
+
+.campo__input:focus {
+  border-bottom: 2px solid var(--color-boton-primario); 
+}
+
+.campo__label {
+  color: var(--color-label);
+  cursor: pointer;
+  position: absolute;
+  top: 4px; 
+  left: 10px; 
+  transform: translateY(0px);
+  transition: transform 0.5s, color 0.3s, font-size 0.3s; 
+  font-size: 16px; 
+}
+
+.campo__input:focus + .campo__label,
+.campo__input:not(:placeholder-shown) + .campo__label {
+  font-size: 14px; 
+  top: -10px;
+}
+
+.campo__input--textarea {
+  height: 100px;
+}
+
+.contacto__boton {
+  background-color: var(--color-boton-primario);
+  color: white;
+  border: 2px solid var(--color-boton-primario);
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; 
+  max-width: 170px; 
+  min-width: 50px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.contacto__boton:hover {
+  background-color: darken(var(--color-boton-secundario), 10%);
+  border: 2px solid var(--color-boton-primario);
+  color: var(--color-boton-primario);
+}
+
+.piePagina{
+  text-align: center;
+  color: var(--color-texto);
+  font-size: 16px;
+  font-weight: 500;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 

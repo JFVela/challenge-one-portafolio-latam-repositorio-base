@@ -189,14 +189,32 @@
 
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
+        <img src="/assets/contact_image.png" alt="foto de telefono" class="imagenContacto">
         <h2 class="contacto__titulo">Contacto</h2>
         <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
+            <div class="campo">
+                <input type="text" class="campo__input" placeholder=" " required>
+                <label class="campo__label">Nombre</label>
+            </div>
+            
+            <div class="campo">
+                <input type="email" class="campo__input" placeholder=" " required>
+                <label class="campo__label">Correo Electrónico</label>
+            </div>
+            
+            <div class="campo">
+                <textarea class="campo__input campo__input--textarea" placeholder=" " required></textarea>
+                <label class="campo__label">Mensaje</label>
+            </div>
+            
             <button class="contacto__boton" type="submit">Enviar</button>
         </form>
     </section>
+    <footer class="piePagina">
+        <p class="piePagina__autor">Desarrollado Por Juan Figueroa 2024</p>
+    </footer>
+
+
 </body>
 <script src="script.js"></script>
 
