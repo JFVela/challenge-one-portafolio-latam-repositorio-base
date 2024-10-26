@@ -1,110 +1,264 @@
-/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
-*/
+/* Variables de color */
 :root {
-    --color-de-fondo: #F5F5F5;
-    --color-de-fondo-menu: #ffffff;
-    --color-de-link: #000000;
+  --color-de-fondo: #f5f5f5;
+  --color-de-fondo-menu: #ffffff;
+  --color-fondo-2: #eaf2fd;
+  --color-de-link: #000000;
+  --color-texto: #464646;
 }
 
+/* Estilos globales */
 body {
-    background-color: var(--color-de-fondo);
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    line-height: 1.6;
+  background-color: var(--color-de-fondo);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  line-height: 1.6;
+  padding-top: 72px;
 }
 
-ol, ul, li {
-    list-style: none;
+ol,
+ul,
+li {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: var(--color-de-link);
+  text-decoration: none;
+  color: var(--color-de-link);
 }
 
 /* ------------------------------ Sección Menú -------------------------------*/
 .cabecera {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: var(--color-de-fondo-menu);
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 40px;
+  width: 100%;
 }
 
 .cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+  max-width: 80px; /* Ajuste para pantallas pequeñas */
 }
 
 .cabecera__titulo {
-    font-size: 1.2rem;
-    text-align: center;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
+/* Configuración para que solo el sexto elemento sea visible en pantallas pequeñas */
 .navegacion__lista {
-    display: none;
+  display: flex;
+  margin: 0;
+}
+
+.navegacion__elemento {
+  display: none; /* Oculta todos los elementos inicialmente */
+}
+
+/* Muestra solo el sexto elemento en pantallas pequeñas */
+.navegacion__elemento:nth-child(6) {
+  display: block;
 }
 
 .navegacion__elemento a {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
+
 /* ------------------------------ Sección Presentación ------------------------------*/
 
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--color-texto);
+}
+
+.presentacion__foto {
+  max-width: 100px;
+  height: 100%;
+}
+
+.presentacion__titulo {
+  font-size: 22px;
+}
+.presentacion__subtitulo {
+  font-size: 14px;
+  font-weight: 400;
+}
+.redes {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+  background-color: var(--color-fondo-2);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-
+.sobre-mi > * {
+  padding: 0;
+  margin: 0;
+}
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.habilidades > * {
+  padding: 0;
+  margin: 0;
+}
+
+.habilidades__lista {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Centra los elementos en la fila */
+  column-gap: 1rem;
+  row-gap: 2rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.habilidades__elemento {
+  background-color: white;
+  width: 40%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between; 
+  padding: 1rem; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.habilidades__icono {
+  width: auto;
+  height: 50px;
+}
+
+.habilidades__nombre {
+  padding-top: 0.5rem;
+  margin: 0;
+}
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
 
+.aficiones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
 
-/*------------------------------ Sección de Proyectos --------------------------------*/
+.aficiones > * {
+  padding: 0;
+  margin: 0;
+}
 
+.aficiones__lista {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Centra los elementos en la fila */
+  column-gap: 1rem;
+  row-gap: 2rem;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-/*------------------------------ Sección de Contacto ---------------------------------*/
+.aficiones__elemento {
+  background-color: white;
+  width: 40%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between; 
+  padding: 1rem; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.aficiones__icono {
+  width: auto;
+  height: 50px;
+}
+
+.aficiones__nombre {
+  padding-top: 0.5rem;
+  margin: 0;
+}
 
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
-    .cabecera {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .cabecera__logo {
-        max-width: 100px;
-    }
+  .cabecera__logo {
+    max-width: 100px;
+  }
 
-    .cabecera__titulo {
-        font-size: 1.5rem;
-    }
+  .cabecera__titulo {
+    font-size: 1.5rem;
+  }
 
-    .navegacion__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
+  /* Muestra todos los elementos en pantallas a partir de 768px */
+  .navegacion__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
 
-    .navegacion__elemento a {
-        font-size: 1rem;
-    }
+  .navegacion__elemento {
+    display: block;
+  }
+
+  .navegacion__elemento a {
+    font-size: 1rem;
+  }
 }
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
-    .cabecera__titulo {
-        font-size: 1.8rem;
-    }
+  .cabecera__titulo {
+    font-size: 1.8rem;
+  }
 
-    .navegacion__elemento a {
-        font-size: 1.1rem;
-    }
+  .navegacion__elemento a {
+    font-size: 1.1rem;
+  }
+}
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
 }
