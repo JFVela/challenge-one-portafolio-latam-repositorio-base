@@ -5,6 +5,8 @@
   --color-fondo-2: #eaf2fd;
   --color-de-link: #000000;
   --color-texto: #464646;
+  --color-boton-primario: #2a7ae4;
+  --color-boton-secundario: #ffffff;
 }
 
 /* Estilos globales */
@@ -207,7 +209,7 @@ a {
   margin: 0;
 }
 
-/*------------------------------ Sección de Proyectos --------------------------------*/
+/*------------------------------ Sección de Formacion --------------------------------*/
 .formacion {
   background-color: var(--color-fondo-2);
   padding: 2rem;
@@ -243,16 +245,15 @@ a {
   background-color: white;
   height: 130px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   border-radius: 1rem;
 }
 
 .formacion__icono {
-  height: 70px; 
+  height: 70px;
   width: auto;
 }
-
 
 .formacion__nombre {
   margin: 0;
@@ -263,6 +264,78 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.proyectos * {
+  margin: 0;
+}
+
+.proyectos__titulo {
+  font-size: 22px;
+}
+.proyectos__contenedor {
+  background-color: var(--color-de-fondo-menu);
+  border-radius: 0.5rem;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.proyectos__imagen {
+  width: 100%;
+}
+.proyectos__nombre {
+  font-size: 16px;
+}
+.proyectos__descripcion {
+  font-size: 14px;
+  font-weight: 500;
+}
+.proyectos__botones {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Estilos comunes para ambos botones */
+.proyectos__botones a {
+  border: 2px solid var(--color-boton-primario);
+  padding: 12px 16px;
+  transition: background-color 0.3s, color 0.3s; 
+  border-radius: 0.5rem;
+}
+
+/* Estilos específicos para el primer botón */
+.proyectos__botones a:nth-child(1) {
+  color: var(--color-boton-primario);
+}
+.proyectos__botones a:nth-child(1):hover {
+  background-color: var(--color-boton-primario);
+  color: var(--color-boton-secundario);
+}
+
+/* Estilos específicos para el segundo botón */
+.proyectos__botones a:nth-child(2) {
+  background-color: var(--color-boton-primario);
+  color: var(--color-boton-secundario);
+}
+.proyectos__botones a:nth-child(2):hover {
+  background-color: var(--color-boton-secundario);
+  color: var(--color-boton-primario);
+}
+
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
