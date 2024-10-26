@@ -431,6 +431,16 @@ a {
   color: var(--color-boton-primario);
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none; 
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ------------------------------ Pie de Pagina ---------------------------------------*/
+
 .piePagina{
   text-align: center;
   color: var(--color-texto);
